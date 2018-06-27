@@ -21,7 +21,7 @@ class Garage {
       return
     }
     if (door.online) {
-      if (door.doorState !== 1) {
+      if (door.doorState !== 2) {
         const response = await myq.setDoorState(door.id, CLOSE)
         console.log(response)
         res.send({success: true, message: response})
